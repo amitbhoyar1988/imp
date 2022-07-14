@@ -3,7 +3,7 @@ EVEN
 phases:
   install:
     runtime-versions:
-      java: java13
+      java: coreetto13
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
