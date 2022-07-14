@@ -3,14 +3,14 @@ phases:
   install:
     commands:
       - yum update -y
-      - sudo amazon-linux-extras install java-openjdk11 -y
+      - sudo yum install java-1.8.0-openjdk -y
       - sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
       - sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
       - yum install -y apache-maven
       - mvn --version
       - java --version
     runtime-version:
-      java: /usr/lib/jvm/java-17-amazon-corretto.x86_64
+      #java: /usr/lib/jvm/java-17-amazon-corretto.x86_64
     
   pre_build:
     commands:
