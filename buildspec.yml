@@ -8,6 +8,7 @@ phases:
       - sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
       - yum install -y apache-maven
       - mvn --version
+      - java --version
     runtime-version:
       java: /usr/lib/jvm/java-17-amazon-corretto.x86_64
     
