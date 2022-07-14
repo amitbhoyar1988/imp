@@ -14,6 +14,7 @@ COPY public_key.der /public_key.der
 #RUN yes changeit | keytool -import -v -trustcacerts -alias keyAlias  -file certificate.crt -keystore /opt/openjdk-13/lib/security/cacerts  -keypass changeit
 RUN yes | keytool -import -v -trustcacerts -alias keyAlias  -file certificate.crt -keystore /opt/openjdk-13/lib/security/cacerts  -storepass changeit 
 
+
 # run the app
 CMD ["/opt/openjdk-13/bin/java", "-jar", "/echo.jar"]
 
