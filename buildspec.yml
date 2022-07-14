@@ -8,8 +8,7 @@ phases:
       -apt-get update -y
       -apt-get install -y openjdk-13-jdk
       -apt-get install -y maven
-    runtime-versions:
-      java: coreetto13
+    
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
